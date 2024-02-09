@@ -13,16 +13,14 @@ print(Fibonacci_unMemoized(4))
 
 
 # Dynamic programming
-FibArray = [0, 1]
-def Fibonacci_Memoized(n):
-	if n <= 0:
-		print("Incorrect input")
-	elif n <= len(FibArray):
-		return FibArray[n - 1]
-	else:
-		temp_fib = Fibonacci_Memoized(n - 1) + Fibonacci_Memoized(n - 2)
-		FibArray.append(temp_fib)
-		return temp_fib
+cache = {0:0, 1:1}
+def Fibo_Memo(n):
+	if n in cache:
+		return cache[n]
+		
+	cache[n] = Fibo_Memo[n-1] + Fibo_Memo[n-2]
+	return cache[n]
+	
 
 print(Fibonacci_Memoized(9))
 
