@@ -20,8 +20,8 @@ def Fibonacci_Memoized(n):
 		return FibArray[n - 1]
 	else:
 		temp_fib = Fibonacci_Memoized(n - 1) + Fibonacci_Memoized(n - 2)
-	FibArray.append(temp_fib)
-	return temp_fib
+		FibArray.append(temp_fib)
+		return temp_fib
 
 print(Fibonacci_Memoized(9))
 
