@@ -1,4 +1,4 @@
-# Recursion
+# 1st method : Recursion
 def Fibonacci_unMemoized(n):
 	if n < 0:
 		print("Incorrect input")
@@ -9,10 +9,9 @@ def Fibonacci_unMemoized(n):
 	else:
 		return Fibonacci_unMemoized(n-1) + Fibonacci_unMemoized(n-2)
 
-print(Fibonacci_unMemoized(4))
 
 
-# Dynamic programming
+# 2nd method : Dynamic programming
 cache = {0:0, 1:1}
 def Fibo_Memo(n):
 	if n in cache:
@@ -22,11 +21,8 @@ def Fibo_Memo(n):
 	return cache[n]
 	
 
-print(Fibonacci_Memoized(9))
 
-
-
-
+# Execution
 from time import time
 print("Fn \t Valeur \t Temps_sans_mémoisation \t Temps_avec_mémoisation")
 print("__________________________________")
