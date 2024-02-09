@@ -1,3 +1,4 @@
+# Recursion
 def Fibonacci_unMemoized(n):
 	if n < 0:
 		print("Incorrect input")
@@ -11,7 +12,7 @@ def Fibonacci_unMemoized(n):
 print(Fibonacci_unMemoized(4))
 
 
-
+# Dynamic programming
 FibArray = [0, 1]
 def Fibonacci_Memoized(n):
 	if n <= 0:
@@ -24,9 +25,6 @@ def Fibonacci_Memoized(n):
 		return temp_fib
 
 print(Fibonacci_Memoized(9))
-
-
-
 
 
 
